@@ -163,3 +163,134 @@ $(window).on('mousemove', function (e) {
     $('.rock-9').css('transform', 'translate(' + (offsetX * 1.5) + 'px,' + (offsetY * 1.5) + 'px)');
 });
 
+
+$(document).ready(function () {
+
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        if (target.length > 1) {
+            var targetSection = $(target);
+            if (targetSection.length) {
+                $('html, body').animate({
+                    scrollTop: targetSection.offset().top - 80
+                }, 800);
+            }
+        }
+    });
+
+
+    $(window).on('scroll', function () {
+        var scrolled = $(window).scrollTop();
+        if (scrolled > 100) {
+            $('.main-nav').css('background', 'rgba(0, 0, 0, 0.95)');
+        } else {
+            $('.main-nav').css('background', 'rgba(0, 0, 0, 0.9)');
+        }
+    });
+
+
+    var statsAnimated = false;
+    $(window).on('scroll', function () {
+        var statsSection = $('.gear-stats');
+        if (statsSection.length) {
+            var statsTop = statsSection.offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+
+            if (windowBottom > statsTop + 100 && !statsAnimated) {
+                statsAnimated = true;
+                $('.stat-number').each(function () {
+                    var $this = $(this);
+                    var finalNumber = $this.text();
+                    var isPlus = finalNumber.includes('+');
+                    var isSlash = finalNumber.includes('/');
+                    var cleanNumber = parseInt(finalNumber.replace(/[^0-9]/g, ''));
+
+                    if (!isNaN(cleanNumber)) {
+                        $this.text('0');
+                        $({ Counter: 0 }).animate({ Counter: cleanNumber }, {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function () {
+                                var num = Math.ceil(this.Counter);
+                                if (isSlash) {
+                                    $this.text(num + '/7');
+                                } else if (isPlus) {
+                                    $this.text(num + 'K+');
+                                } else {
+                                    $this.text(num);
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        }
+    });
+
+
+    $(window).on('scroll', function () {
+        var scrolled = $(window).scrollTop();
+        var gearSection = $('.gear-showcase');
+        if (gearSection.length) {
+            var sectionTop = gearSection.offset().top;
+            var sectionHeight = gearSection.outerHeight();
+            var windowHeight = $(window).height();
+
+            if (scrolled + windowHeight > sectionTop && scrolled < sectionTop + sectionHeight) {
+                var parallaxSpeed = (scrolled - sectionTop + windowHeight) * 0.5;
+                gearSection.css('background-position', 'center ' + parallaxSpeed + 'px');
+            }
+        }
+    });
+
+
+    $(window).on('scroll', function () {
+        $('.story-card').each(function () {
+            var cardTop = $(this).offset().top;
+            var cardHeight = $(this).outerHeight();
+            var windowBottom = $(window).scrollTop() + $(window).height();
+
+            if (windowBottom > cardTop + cardHeight * 0.2) {
+                $(this).addClass('animated');
+            }
+        });
+    });
+
+
+    $(window).on('scroll', function () {
+        var scrolled = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        $('.v-section').each(function (index) {
+            var sectionTop = $(this).offset().top;
+            var sectionHeight = $(this).outerHeight();
+            var sectionBottom = sectionTop + sectionHeight;
+            var viewportTop = scrolled;
+            var viewportBottom = scrolled + windowHeight;
+
+
+            if (viewportBottom >= sectionTop && viewportTop <= sectionBottom) {
+
+                var visibleTop = Math.max(viewportTop, sectionTop);
+                var visibleBottom = Math.min(viewportBottom, sectionBottom);
+                var visibleHeight = visibleBottom - visibleTop;
+                var visibilityRatio = visibleHeight / windowHeight;
+
+
+                var parallaxOffset = (scrolled - sectionTop) * 0.3;
+                $(this).css('background-position', 'center ' + (50 + parallaxOffset * 0.01) + '%');
+
+
+                if (visibilityRatio > 0.3) {
+                    $(this).addClass('section-active');
+                } else {
+                    $(this).removeClass('section-active');
+                }
+            } else {
+                $(this).removeClass('section-active');
+            }
+        });
+    });
+});
+

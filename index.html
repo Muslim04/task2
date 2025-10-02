@@ -13,9 +13,10 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="home">
     <div class="background">
-      <h1>Parallax Effect</h1>
+      <h1>Adventure Awaits</h1>
+      <p class="hero-subtitle">Discover the extraordinary in every journey</p>
       <div class="scroll-indicator" aria-hidden="true"></div>
 
       <div class="layer layer-1"></div>
@@ -27,24 +28,38 @@
       <div class="moon" aria-hidden="true"></div>
     </div>
     <div class="content">
+      <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">EXPLORE</div>
+          <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#adventures">Adventures</a></li>
+            <li><a href="#gear">Gear</a></li>
+            <li><a href="#stories">Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
       <div class="text">
-        <p>In hac habitasse platea dictumst. Vivamus nec est et augue blandit aliquam quis non magna. Nunc velit nisi,
-          porta ac libero in, porttitor placerat purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia Curae; Nunc ut posuere quam. Aenean in leo mattis, convallis dolor vel, tempor lectus.</p>
-        <p>Elit nulla vulputate ex, sed porta est risus ac lorem. Duis sed blandit felis. In hac habitasse platea
-          dictumst. Vivamus nec est et augue blandit aliquam quis non magna. Nunc velit nisi, porta ac libero in,
-          porttitor placerat purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-          Curae; Nunc ut posuere quam. Aenean in leo mattis, convallis dolor vel, tempor lectus.</p>
-        <p>Duis sed blandit felis. Integer dictum, mi eget tristique semper, elit nulla vulputate ex, sed porta est
-          risus
-          ac lorem. In hac habitasse platea dictumst. Vivamus nec est et augue blandit aliquam quis non magna.
-          Vestibulum
-          ante ipsum primis.</p>
-        <p>Integer dictum, mi eget tristique semper, elit nulla vulputate ex, sed porta est risus ac lorem. Duis sed
-          blandit felis. In hac habitasse platea dictumst. Vivamus nec est et augue blandit aliquam quis non magna. Nunc
-          velit nisi, porta ac libero in, porttitor placerat purus. Vestibulum ante ipsum primis in faucibus orci luctus
-          et ultrices posuere cubilia Curae; Nunc ut posuere quam. Aenean in leo mattis, convallis dolor vel, tempor
-          lectus.</p>
+        <h2>The Call of the Wild</h2>
+        <p>Every mountain has a story to tell, every trail holds a secret waiting to be discovered. We believe that the
+          greatest adventures aren't just found in distant lands, but in the courage to step outside your comfort zone
+          and embrace the unknown.</p>
+
+        <p>From the frost-kissed peaks of alpine ranges to the sun-scorched expanses of desert wilderness, from the
+          rhythmic crash of ocean waves to the whispered secrets of ancient forests – nature calls to those brave enough
+          to answer.</p>
+
+        <p>Our gear isn't just equipment; it's your companion on the journey of a lifetime. Crafted for those who
+          understand that the path less traveled often leads to the most extraordinary destinations.</p>
+
+        <blockquote class="adventure-quote">
+          "The mountains are calling and I must go." <cite>– John Muir</cite>
+        </blockquote>
+
+        <p>Whether you're taking your first steps on a local hiking trail or planning an expedition to remote corners of
+          the earth, every adventure begins with a single step. Let us equip you for the journey ahead, because every
+          explorer deserves gear as bold as their dreams.</p>
       </div>
       <img class="rock-1 rocks" src="https://i.imgur.com/yIbmDYw.png" alt="rock" />
       <img class="rock-2 rocks" src="https://i.imgur.com/MZutMpv.png" alt="rock" />
@@ -60,35 +75,171 @@
 
   </div>
 
-  <section class="content content-2">
+  <section class="content content-2" id="adventures">
     <div class="v-section"
-      style="--bg:url('https://images.unsplash.com/photo-1526481280698-8fcc13fd5f1d?q=80&w=2400&auto=format&fit=crop')">
+      style="--bg:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2800&auto=format&fit=crop&ixlib=rb-4.0.3')">
       <div class="v-overlay"></div>
       <div class="v-content">
-        <h2>Peak Performance</h2>
-        <p>Built to breathe above the tree line. Insulation that moves, shells that shield. Go higher, stay lighter.</p>
-        <a href="#" class="v-cta">Shop Alpine</a>
+        <h2>Alpine Mastery</h2>
+        <p>Where the air grows thin and the stakes grow high, our alpine collection rises to meet the challenge.
+          Engineered for those who find solace in silence and strength in solitude, thousands of feet above the ordinary
+          world.</p>
+        <a href="#gear" class="v-cta">Shop Alpine</a>
       </div>
     </div>
     <div class="v-section"
-      style="--bg:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2400&auto=format&fit=crop')">
+      style="--bg:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2800&auto=format&fit=crop&ixlib=rb-4.0.3')">
       <div class="v-overlay"></div>
       <div class="v-content">
-        <h2>Ocean Proof</h2>
-        <p>Waterproof. Windproof. Effort-proof. Engineered for sustained speed when weather turns wild.</p>
-        <a href="#" class="v-cta">Explore Shells</a>
+        <h2>Maritime Adventures</h2>
+        <p>From sailing the seven seas to coastal exploration, our marine collection stands against salt spray and storm
+          surge. Built for those who understand that the ocean's power demands respect, preparation, and uncompromising
+          gear.</p>
+        <a href="#gear" class="v-cta">Explore Shells</a>
       </div>
     </div>
     <div class="v-section"
-      style="--bg:url('https://images.unsplash.com/photo-1496560736447-7c3b89e84b75?q=80&w=2400&auto=format&fit=crop')">
+      style="--bg:url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?q=80&w=2800&auto=format&fit=crop&ixlib=rb-4.0.3')">
       <div class="v-overlay"></div>
       <div class="v-content">
-        <h2>Desert Ready</h2>
-        <p>Sun-smart layers and cooling knits. Carry less, go further — built for the long horizon.</p>
-        <a href="#" class="v-cta">Build Your Kit</a>
+        <h2>Desert Wanderer</h2>
+        <p>In the land where water is sacred and shade is salvation, every piece of gear can mean the difference between
+          adventure and survival. Designed for the vastness of arid landscapes and the endurance of desert spirits.</p>
+        <a href="#gear" class="v-cta">Build Your Kit</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- New Adventure Stories Section -->
+  <section class="stories-section" id="stories">
+    <div class="stories-container">
+      <h2>Tales from the Trail</h2>
+      <div class="stories-grid">
+        <article class="story-card">
+          <div class="story-image"
+            style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2400&auto=format&fit=crop');">
+          </div>
+
+      </div>
+      <div class=" story-content">
+        <h3>Summit at Sunrise</h3>
+        <p>After 14 hours of climbing through darkness, the first rays of dawn revealed a world transformed.
+          Standing at 14,000 feet, surrounded by a sea of clouds, I understood why some journeys change you forever.
+        </p>
+        <span class="story-meta">Mount Whitney, California</span>
+      </div>
+      </article>
+
+      <article class="story-card">
+        <div class="story-image"
+          style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2400&auto=format&fit=crop')">
+        </div>
+        <div class="story-content">
+          <h3>Into the Deep</h3>
+          <p>Twenty feet below the surface, time moves differently. Each breath is measured, each movement deliberate.
+            In the underwater realm, we become visitors in an alien world of wonder.</p>
+          <span class="story-meta">Great Barrier Reef, Australia</span>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <div class="story-image"
+          style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2400&auto=format&fit=crop');">
+        </div>
+
+
+        <div class="story-content">
+          <h3>Lake Reflections</h3>
+          <p>By the lake, calmness has a presence. The water ripples like gentle time, and under a sky mirrored
+            perfectly on the surface, you realize how serene and yet how vast the world around you is.</p>
+          <span class="story-meta">Lake Tahoe, USA</span>
+
+        </div>
+      </article>
+    </div>
+    </div>
+  </section>
+
+  <!-- Gear Showcase Section -->
+  <section class="gear-showcase" id="gear">
+    <div class="gear-parallax-bg"></div>
+    <div class="gear-content">
+      <h2>Trusted by Explorers</h2>
+      <p class="gear-subtitle">From weekend warriors to professional adventurers</p>
+
+      <div class="gear-stats">
+        <div class="stat-item">
+          <span class="stat-number">147</span>
+          <span class="stat-label">Expeditions Equipped</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">89</span>
+          <span class="stat-label">Countries Explored</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15K+</span>
+          <span class="stat-label">Adventures Enabled</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Support & Guidance</span>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Footer Section -->
+  <footer class="main-footer" id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Explore</h3>
+        <p>Gear that inspires, adventures that transform. Join the community of explorers who refuse to settle for
+          ordinary.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="YouTube">📹</a>
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#adventures">Adventures</a></li>
+          <li><a href="#gear">Gear Guide</a></li>
+          <li><a href="#stories">Success Stories</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Adventure Types</h4>
+        <ul>
+          <li><a href="#alpine">Alpine Climbing</a></li>
+          <li><a href="#marine">Ocean Adventures</a></li>
+          <li><a href="#desert">Desert Expeditions</a></li>
+          <li><a href="#forest">Forest Trekking</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Start Your Journey</h4>
+        <p>Ready to answer the call of adventure?</p>
+        <a href="#contact" class="footer-cta">Get Started</a>
+        <p class="footer-contact">
+          Email: adventures@explore.com<br>
+          Phone: 1-800-EXPLORE
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Explore Adventures. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a
+          href="#terms">Terms of Service</a></p>
+    </div>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
